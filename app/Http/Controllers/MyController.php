@@ -66,6 +66,14 @@ class MyController extends Controller
 
         return redirect() -> route('home');
     }
+
+    public function destroy($id){
+
+        $match = Match::findOrFail($id);
+        $match -> delete();
+
+        return redirect() -> route('home');
+    }
 }
 
 

@@ -14,8 +14,7 @@
 body {
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: cadetblue;
-    background-color: azure;
+    color: gray;
 
     .container {
 
@@ -30,7 +29,7 @@ body {
 
         a {
 
-            // text-decoration: none;
+            text-decoration: none;
             color: inherit;
         }
 
@@ -56,13 +55,30 @@ body {
                 display: flex;
                 justify-content: space-between;
                 width: 300px;
+
+                .del {
+
+                    display: inline-block;
+                    margin-left: 1em;
+                    width: 25px;
+                    height: 25px;
+
+                    text-align: center;
+                    line-height: 25px;
+                    background-color: red;
+                    border-radius: 7px;
+
+                    .fa-times {
+    
+                        color: white;
+                    }
+                }
             }
 
             a:not(:last-child) {
 
-                display: block;
                 margin-bottom: 1em;
-
+                flex-grow: 1;
             }
         }
 

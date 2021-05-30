@@ -6,8 +6,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: cadetblue;
-  background-color: azure;
+  color: gray;
 }
 
 body .container {
@@ -22,6 +21,7 @@ body .container footer {
 }
 
 body .container a {
+  text-decoration: none;
   color: inherit;
 }
 
@@ -46,9 +46,24 @@ body .container ul li {
   width: 300px;
 }
 
+body .container ul li .del {
+  display: inline-block;
+  margin-left: 1em;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  background-color: red;
+  border-radius: 7px;
+}
+
+body .container ul li .del .fa-times {
+  color: white;
+}
+
 body .container ul a:not(:last-child) {
-  display: block;
   margin-bottom: 1em;
+  flex-grow: 1;
 }
 
 body .container table tr {
