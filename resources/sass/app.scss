@@ -1,0 +1,97 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin vertical-padding {
+    
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: cadetblue;
+    background-color: azure;
+
+    .container {
+
+        padding-left: 15%;
+        padding-right: 15%;
+
+        header,
+        footer {
+
+            @include vertical-padding;
+        }
+
+        a {
+
+            // text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+
+            margin-top: 2em;
+            padding: 1em 2em;
+            cursor: pointer;
+
+            color: chocolate;
+            font-weight: 600;
+            border: 1px solid chocolate;
+            border-radius: 5px;
+            background-color: transparent;
+        }
+
+        ul {
+
+            list-style: none;
+
+            li {
+
+                display: flex;
+                justify-content: space-between;
+                width: 300px;
+            }
+
+            a:not(:last-child) {
+
+                display: block;
+                margin-bottom: 1em;
+
+            }
+        }
+
+        table {
+
+            tr {
+                
+                display: block;
+                border-bottom: .5px solid cadetblue;
+
+                td {
+
+                    width: 100px;
+                    padding: .5em 1em;
+
+                    &:first-child {
+
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        form {
+
+            label {
+
+                display: block;
+            }
+        }
+    }
+}

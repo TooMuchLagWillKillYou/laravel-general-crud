@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: cadetblue;
+  background-color: azure;
+}
+
+body .container {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+body .container header,
+body .container footer {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+body .container a {
+  color: inherit;
+}
+
+body .container button {
+  margin-top: 2em;
+  padding: 1em 2em;
+  cursor: pointer;
+  color: chocolate;
+  font-weight: 600;
+  border: 1px solid chocolate;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+body .container ul {
+  list-style: none;
+}
+
+body .container ul li {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+body .container ul a:not(:last-child) {
+  display: block;
+  margin-bottom: 1em;
+}
+
+body .container table tr {
+  display: block;
+  border-bottom: 0.5px solid cadetblue;
+}
+
+body .container table tr td {
+  width: 100px;
+  padding: 0.5em 1em;
+}
+
+body .container table tr td:first-child {
+  font-weight: 600;
+}
+
+body .container form label {
+  display: block;
+}
+
