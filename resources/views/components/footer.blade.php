@@ -1,3 +1,5 @@
 <footer>
-    <h3>Footer</h3>
+    <a href="{{ route('home') }}">
+        <button>Back to Home</button>
+    </a>
 </footer>

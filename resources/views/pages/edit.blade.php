@@ -8,24 +8,24 @@
             @csrf
             @method('POST')
 
-            <div>
+            <div class="input-form">
                 <label for="team1">Team 1</label>
-                <input type="text" name="team1" id="team1" value="{{ $match -> team1 }}">
+                <input type="text" name="team1" id="team1" value="{{ ucfirst($match -> team1 )}}">
             </div>
             
-            <div>
+            <div class="input-form">
                 <label for="team2">Team 2</label>
-                <input type="text" name="team2" id="team2" value="{{ $match -> team2 }}">
+                <input type="text" name="team2" id="team2" value="{{ ucfirst($match -> team2 )}}">
             </div>
                 
-            <div>
+            <div class="input-form">
                 <label for="point1">Point 1</label>
-                <input type="number" name="point1" id="point1" value="{{ $match -> point1 }}">
+                <input type="number" name="point1" id="point1" value="{{ ucfirst($match -> point1) }}">
             </div>
 
-            <div>
+            <div class="input-form">
                 <label for="point2">Point 2</label>
-                <input type="number" name="point2" id="point2" value="{{ $match -> point2 }}">
+                <input type="number" name="point2" id="point2" value="{{ ucfirst($match -> point2) }}">
             </div>
 
             <div>

@@ -9,7 +9,44 @@ body {
   color: gray;
 }
 
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body button {
+  margin-top: 2em;
+  padding: 0.7em 1.2em;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: dodgerblue;
+}
+
+body button:hover {
+  background-color: blue;
+}
+
+body .input-form:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+body .input-form label {
+  display: block;
+  margin-bottom: 0.3em;
+  font-size: 14px;
+}
+
+body .input-form input {
+  padding: 0.5em 0.8em;
+  border-radius: 5px;
+  border: 0.5px solid lightgrey;
+}
+
 body .container {
+  width: 60%;
+  margin: 0 auto;
   padding-left: 15%;
   padding-right: 15%;
 }
@@ -20,22 +57,6 @@ body .container footer {
   padding-bottom: 5%;
 }
 
-body .container a {
-  text-decoration: none;
-  color: inherit;
-}
-
-body .container button {
-  margin-top: 2em;
-  padding: 1em 2em;
-  cursor: pointer;
-  color: chocolate;
-  font-weight: 600;
-  border: 1px solid chocolate;
-  border-radius: 5px;
-  background-color: transparent;
-}
-
 body .container ul {
   list-style: none;
 }
@@ -43,27 +64,36 @@ body .container ul {
 body .container ul li {
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: 400px;
+  margin-top: 0.7em;
+  padding: 0.3em 0.1em;
+  border-bottom: 0.5px solid lightgray;
 }
 
-body .container ul li .del {
-  display: inline-block;
+body .container ul li:not(:last-child) {
+  margin-bottom: 0.1em;
+}
+
+body .container ul li:hover {
+  background-color: rgba(211, 211, 211, 0.25);
+}
+
+body .container ul li .opt {
+  color: dodgerblue;
+  font-size: 14px;
+}
+
+body .container ul li .opt a:last-child {
   margin-left: 1em;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  line-height: 25px;
-  background-color: red;
-  border-radius: 7px;
 }
 
-body .container ul li .del .fa-times {
-  color: white;
-}
-
-body .container ul a:not(:last-child) {
-  margin-bottom: 1em;
+body .container ul a {
   flex-grow: 1;
+}
+
+body .container table thead,
+body .container table .winner {
+  font-weight: 600;
 }
 
 body .container table tr {
@@ -73,14 +103,15 @@ body .container table tr {
 
 body .container table tr td {
   width: 100px;
-  padding: 0.5em 1em;
+  padding: 0.5em 0;
 }
 
-body .container table tr td:first-child {
-  font-weight: 600;
+body .container form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-body .container form label {
-  display: block;
+body .container form button {
+  margin-top: 4em;
 }
 

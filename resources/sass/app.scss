@@ -16,8 +16,59 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: gray;
 
+    // OVERALL RULES --------------------------------------------
+
+    a {
+
+        text-decoration: none;
+        color: inherit;
+    }
+
+    button {
+
+        margin-top: 2em;
+        padding: .7em 1.2em;
+        cursor: pointer;
+
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background-color: dodgerblue;
+
+        &:hover {
+
+            background-color: blue;
+        }
+    }
+
+    .input-form {
+    
+        &:not(:last-child) {
+
+            margin-bottom: 1em;
+        }
+        
+        label {
+            
+            display: block;
+            margin-bottom: .3em;
+            font-size: 14px;
+        }
+        
+        input {
+            
+            padding: .5em .8em;
+            border-radius: 5px;
+            border: .5px solid lightgrey;
+        }
+    }
+    
+    // ----------------------------------------------------------
+
     .container {
 
+        width: 60%;
+        margin: 0 auto;
         padding-left: 15%;
         padding-right: 15%;
 
@@ -25,25 +76,6 @@ body {
         footer {
 
             @include vertical-padding;
-        }
-
-        a {
-
-            text-decoration: none;
-            color: inherit;
-        }
-
-        button {
-
-            margin-top: 2em;
-            padding: 1em 2em;
-            cursor: pointer;
-
-            color: chocolate;
-            font-weight: 600;
-            border: 1px solid chocolate;
-            border-radius: 5px;
-            background-color: transparent;
         }
 
         ul {
@@ -54,35 +86,50 @@ body {
 
                 display: flex;
                 justify-content: space-between;
-                width: 300px;
+                width: 400px;
+                margin-top: .7em;
 
-                .del {
+                padding: .3em .1em;
+                border-bottom: .5px solid lightgray;
 
-                    display: inline-block;
-                    margin-left: 1em;
-                    width: 25px;
-                    height: 25px;
+                &:not(:last-child) {
 
-                    text-align: center;
-                    line-height: 25px;
-                    background-color: red;
-                    border-radius: 7px;
+                    margin-bottom: .1em;
+                }
+                
+                &:hover {
 
-                    .fa-times {
-    
-                        color: white;
+                    background-color: rgba($color: lightgrey, $alpha: .25);
+                }
+
+                .opt {
+
+                    color: dodgerblue;
+                    font-size: 14px;
+
+                    a {
+
+                        &:last-child {
+
+                            margin-left: 1em;
+                        }
                     }
                 }
             }
 
-            a:not(:last-child) {
+            a {
 
-                margin-bottom: 1em;
                 flex-grow: 1;
             }
         }
 
         table {
+
+            thead,
+            .winner {
+                
+                font-weight: 600;
+            }
 
             tr {
                 
@@ -92,21 +139,22 @@ body {
                 td {
 
                     width: 100px;
-                    padding: .5em 1em;
-
-                    &:first-child {
-
-                        font-weight: 600;
-                    }
+                    padding: .5em 0;
                 }
             }
         }
 
         form {
 
-            label {
+            .form-grid {
 
-                display: block;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            button {
+
+                margin-top: 4em;
             }
         }
     }

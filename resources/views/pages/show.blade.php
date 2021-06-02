@@ -4,31 +4,32 @@
     <main>
 
         <table>
-            <tr>
+            <thead>
                 <td>Team 1</td>
-                <td>{{ $match-> team1 }}</td>
-                <td>{{ $match-> point1 }}</td>
+                <td>Team 2</td>
+            </thead>
+            <tr>
+                <td>{{ ucfirst($match-> team1) }}</td>
+                <td>{{ ucfirst($match-> point1) }}</td>
             </tr>
             
             <tr>
-                <td>Team 2</td>
-                <td>{{ $match-> team2 }}</td>
-                <td>{{ $match-> point2 }}</td>
+                <td>{{ ucfirst($match-> team2) }}</td>
+                <td>{{ ucfirst($match-> point2) }}</td>
             </tr>
         
             <tr>
-                <td>Result</td>
-                <td>{{ $match-> result }}</td>
+                <td>Winner</td>
+                @if ($match-> result)
+                
+                    <td class="winner">{{ ucfirst($match-> team2) }}</td>
+                @else
+                        
+                    <td class="winner">{{ ucfirst($match-> team1) }}</td>
+                @endif
             </tr>
         </table>
         
-        @if ($match-> result)
-        
-            <p>Winner is {{ $match-> team2 }}</p>
-        @else
-                
-            <p>Winner is {{ $match-> team1 }}</p>
-        @endif
         
     </main>
 @endsection
